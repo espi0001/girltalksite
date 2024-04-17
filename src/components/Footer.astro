@@ -3,83 +3,165 @@ import "../styles/style.css";
 ---
 
 <footer>
-  <section class="indhold">
-    <article class="kasse1">
+  <article class="kasse1">
+    <div class="footer_header">
       <h3>Rådgivning for forældre</h3>
-
+    </div>
+    <div class="footer_text">
       <p>Har du brug for at tale med nogen om dit barns trivsel? Så kontakt vores forældrerådgivning. Rådgivningen er gratis og fortrolig.</p>
-
+    </div>
+    <div class="footer_book_link">
       <a href="#">Book en samtale</a>
-    </article>
-
-    <article class="kasse2">
+    </div>
+  </article>
+  <article class="kasse2">
+    <div class="footer_header">
       <h3>For forældre</h3>
-      <div class="kasse_indhold">
+    </div>
+    <div class="kasse_indhold">
+      <div>
         <a href="#">Book en samtale</a>
+      </div>
+      <div>
         <a href="#">Kontakt</a>
+      </div>
+      <div>
         <a href="#">Lokalafdelinger</a>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <article class="kasse3">
+  <article class="kasse3">
+    <div class="footer_header">
       <h3>Om GirlTalk</h3>
-      <div class="kasse_indhold">
+    </div>
+    <div class="kasse_indhold">
+      <div>
         <a href="#">Nyheder</a>
+      </div>
+      <div>
         <a href="#">Bliv frivillig</a>
+      </div>
+      <div>
         <a href="#">Støt</a>
+      </div>
+      <div>
         <a href="#">Jobs</a>
+      </div>
+      <div>
         <a href="#">Vores indsamlinger</a>
+      </div>
+      <div>
         <a href="#">Privatpolitik</a>
+      </div>
+      <div>
         <a href="#">Cookiepolitik</a>
       </div>
-    </article>
-
-    <article class="kasse4">
+    </div>
+  </article>
+  <article class="kasse4">
+    <div class="footer_header">
       <h3>Find os her</h3>
-      <div class="kasse_indhold">
+    </div>
+    <div class="kasse_indhold">
+      <div>
         <a href="#" target="_blank"> <img src="/public/youtube.svg" alt="" /> Youtube</a>
+      </div>
+      <div>
         <a href="#" target="_blank"> <img src="/public/instagram.svg" alt="" /> Instagram</a>
+      </div>
+      <div>
         <a href="#" target="_blank"> <img src="/public/facebook.svg" alt="" /> Facebook</a>
+      </div>
+      <div>
         <a href="#" target="_blank"> <img src="/public/linkedin.svg" alt="" /> Linkedin</a>
+      </div>
+      <div>
         <a href="#" target="_blank"> <img src="/public/tiktok.svg" alt="" /> TikTok</a>
+      </div>
+      <div>
         <a href="#" target="_blank"> <img src="/public/spotify.svg" alt="" /> Spotify</a>
       </div>
-    </article>
-  </section>
-</footer>
+    </div>
+  </article>
 
-<style>
-  footer {
-    text-align: left;
-    background-color: var(--background-color);
-    margin-top: auto;
-    margin-bottom: 82px;
-    padding-top: 61px;
-    justify-content: space-between;
-  }
-  .indhold {
+  <style>
+    footer {
+      /* text-align: left; */
+      background-color: var(--background-color);
+      /* margin-top: auto; */
+      display: flex;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin-inline: 20px;
+      padding: 15px;
+      margin-bottom: 82px;
+      padding-top: 61px;
+    }
+
+    footer a {
+      text-decoration: none;
+    }
+
+    .kasse_indhold img {
+      width: 20px;
+      height: 14px;
+    }
+
+    .kasse_indhold {
+      padding-left: 0;
+    }
+    .kasse_indhold a {
+      margin-bottom: 24px;
+      line-height: 1.0625;
+      display: block;
+      width: fit-content;
+    }
+    .footer_header h3 {
+      text-transform: none;
+      font-size: 2rem;
+      line-height: 2.625rem;
+      font-weight: 700;
+      margin-bottom: 33px;
+    }
+
+    .footer_text {
+      margin-bottom: 58px;
+    }
+    .footer_text p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      width: 75%;
+    }
+    .footer_book_link a {
+      font-weight: 700;
+      line-height: 1.375rem;
+      text-decoration: none;
+      font-size: 1.25rem;
+    }
+
+    .kasse1 {
+      width: 50%;
+    }
+    /* .indhold {
     display: flex;
-    /* flex-wrap: wrap; */
-  }
-
-  .kasse_indhold img {
-    width: 20px;
-    height: 14px;
+    flex-wrap: wrap;
   }
 
   .kasse_indhold {
     display: block;
   }
+ */
 
-  .kasse1 {
-    width: 50%;
-  }
-
-  /* ___________________________ TABLET  ___________________________*/
-  /* reglerne gælder når skærmen er minimum 768px */
-  @media screen and (min-width: 768px) {
-  }
-  /* ___________________________ DESKTOP  ___________________________*/
-  @media screen and (min-width: 1024px) {
-  }
-</style>
+    /* ___________________________ TABLET  ___________________________*/
+    /* reglerne gælder når skærmen er minimum 768px */
+    @media screen and (min-width: 768px) {
+    }
+    /* ___________________________ DESKTOP  ___________________________*/
+    @media screen and (min-width: 1024px) {
+      h3 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</footer>
