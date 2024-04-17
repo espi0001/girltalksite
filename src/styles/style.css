@@ -35,8 +35,8 @@ body {
 }
 main {
   max-width: 1400px;
-  padding-inline: 15px;
-  margin-inline: 20px;
+  padding: 40px 15px 40px 15px;
+
   padding-top: 5rem;
 }
 
@@ -84,6 +84,12 @@ a:hover {
 /* ___________________________ TABLET  ___________________________*/
 /* reglerne gælder når skærmen er minimum 768px */
 @media screen and (min-width: 768px) {
+  main {
+    max-width: 1400px;
+    padding-inline: 15px;
+    margin-inline: 20px;
+    padding-top: 5rem;
+  }
 }
 
 /* ___________________________ DESKTOP  ___________________________*/
