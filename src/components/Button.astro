@@ -1,0 +1,49 @@
+---
+import "../styles/style.css";
+const { variant, Linket } = Astro.props;
+---
+
+<a href={Linket} class={variant}><slot /></a>
+
+<style>
+  a {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 12px 24px;
+    color: var(--background-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.55s ease;
+    border: 2px solid var(--power-blue-color);
+  }
+
+  a:hover {
+    transform: scale(1.1);
+  }
+
+  .primary {
+    border-radius: 50px;
+    background: var(--power-blue-color);
+    cursor: pointer;
+  }
+  .primary:hover {
+    color: var(--count-on-me-black-color);
+    background: transparent;
+    box-shadow: 0 0 20px var(--gradient-color);
+  }
+
+  .share_button {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background-color: var(--power-blue-color);
+    border-radius: 50%;
+  }
+
+  /* ___________________________ DESKTOP  ___________________________*/
+  @media screen and (min-width: 1024px) {
+    a {
+      font-size: 1.2rem;
+    }
+  }
+</style>
