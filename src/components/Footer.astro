@@ -63,23 +63,23 @@ import "../styles/style.css";
     <div class="footer_header">
       <h3>Find os her</h3>
     </div>
-    <div class="kasse_indhold">
-      <div>
+    <div class="kasse_indhold iconer">
+      <div class="icon">
         <a href="#" target="_blank"> <img src="/public/youtube.svg" alt="" /> Youtube</a>
       </div>
-      <div>
+      <div class="icon">
         <a href="#" target="_blank"> <img src="/public/instagram.svg" alt="" /> Instagram</a>
       </div>
-      <div>
+      <div class="icon">
         <a href="#" target="_blank"> <img src="/public/facebook.svg" alt="" /> Facebook</a>
       </div>
-      <div>
+      <div class="icon">
         <a href="#" target="_blank"> <img src="/public/linkedin.svg" alt="" /> Linkedin</a>
       </div>
-      <div>
+      <div class="icon">
         <a href="#" target="_blank"> <img src="/public/tiktok.svg" alt="" /> TikTok</a>
       </div>
-      <div>
+      <div class="icon">
         <a href="#" target="_blank"> <img src="/public/spotify.svg" alt="" /> Spotify</a>
       </div>
     </div>
@@ -87,16 +87,13 @@ import "../styles/style.css";
 
   <style>
     footer {
-      /* text-align: left; */
       background-color: var(--background-color);
-      /* margin-top: auto; */
-      display: flex;
+      display: block;
       justify-content: space-between;
       max-width: 1400px;
-      margin-inline: 20px;
       padding: 15px;
-      margin-bottom: 82px;
-      padding-top: 61px;
+      padding-top: 43px;
+      margin-bottom: 40px;
     }
 
     footer a {
@@ -118,44 +115,115 @@ import "../styles/style.css";
       width: fit-content;
     }
     .footer_header h3 {
-      text-transform: none;
-      font-size: 2rem;
-      line-height: 2.625rem;
-      font-weight: 700;
-      margin-bottom: 33px;
-    }
+      font-size: 1.125rem;
+      line-height: 1.25rem;
+      margin-bottom: 28px;
 
+      text-transform: none;
+      font-weight: 700;
+    }
+    .kasse1 {
+      margin-bottom: 40px;
+    }
+    .kasse2 h3,
+    .kasse3 h3,
+    .kasse4 h3 {
+      font-size: 1.125rem;
+      margin-bottom: 16px;
+      line-height: 1.25rem;
+      color: var(--power-blue-color);
+    }
     .footer_text {
-      margin-bottom: 58px;
+      margin-bottom: 38px;
     }
     .footer_text p {
       font-size: 1rem;
       line-height: 1.5rem;
-      width: 75%;
+      width: 100%;
     }
     .footer_book_link a {
-      font-weight: 700;
+      font-size: 1.125rem;
       line-height: 1.375rem;
+
+      font-weight: 700;
       text-decoration: none;
-      font-size: 1.25rem;
     }
 
-    .kasse1 {
-      width: 50%;
+    .iconer a {
+      display: flex;
     }
-    /* .indhold {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .kasse_indhold {
-    display: block;
-  }
- */
+    .icon img {
+      margin-right: 12px;
+    }
 
     /* ___________________________ TABLET  ___________________________*/
     /* reglerne gælder når skærmen er minimum 768px */
     @media screen and (min-width: 768px) {
+      footer {
+        /* text-align: left; */
+        background-color: var(--background-color);
+        /* margin-top: auto; */
+        display: flex;
+        justify-content: space-between;
+        max-width: 1400px;
+        margin-inline: 20px;
+        padding: 15px;
+        margin-bottom: 82px;
+        padding-top: 61px;
+      }
+
+      .kasse_indhold img {
+        width: 20px;
+        height: 14px;
+      }
+
+      .kasse_indhold {
+        padding-left: 0;
+      }
+      .kasse_indhold a {
+        margin-bottom: 24px;
+        line-height: 1.0625;
+        display: block;
+        width: fit-content;
+      }
+      .footer_header h3 {
+        text-transform: none;
+        font-size: 2rem;
+        line-height: 2.625rem;
+        font-weight: 700;
+        margin-bottom: 33px;
+      }
+
+      .kasse2 h3,
+      .kasse3 h3,
+      .kasse4 h3 {
+        font-size: 1.5625rem;
+      }
+      .footer_text {
+        margin-bottom: 58px;
+      }
+      .footer_text p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        width: 75%;
+      }
+      .footer_book_link a {
+        font-weight: 700;
+        line-height: 1.375rem;
+        text-decoration: none;
+        font-size: 1.25rem;
+      }
+
+      .kasse1 {
+        width: 50%;
+      }
+
+      .iconer a {
+        display: flex;
+      }
+      .icon img {
+        margin-right: 12px;
+      }
     }
     /* ___________________________ DESKTOP  ___________________________*/
     @media screen and (min-width: 1024px) {
