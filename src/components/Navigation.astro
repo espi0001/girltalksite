@@ -11,18 +11,17 @@ import "../styles/style.css";
 
   <nav>
     <ul class="menu">
-      <li><a href="#">Rådgivning</a></li>
-      <hr />
+      <li><a href="#">Rådgivning <span class="arrow"><img src="/public/chevron-right.svg" alt="chevron right arrow" /></span></a></li>
+
       <li><a href="#">Viden</a></li>
-      <hr />
-      <li><a href="#">Om os</a></li>
-      <hr />
+
+      <li><a href="#">Om os <span class="arrow"><img src="/public/chevron-right.svg" alt="chevron right arrow" /></span></a></li>
+
       <li><a href="#">Shop</a></li>
-      <hr />
-      <li><a href="#">Støt</a></li>
-      <hr />
+
+      <li><a href="#">Støt <span class="arrow"><img src="/public/chevron-right.svg" alt="chevron right arrow" /></span></a></li>
+
       <li><a href="#">Bliv frivillig</a></li>
-      <hr />
     </ul>
 
     <div class="burger">
@@ -46,6 +45,12 @@ import "../styles/style.css";
 
     transition: all 0.3s ease-in-out;
     border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    position: fixed;
+    z-index: 2011;
+    height: 5rem;
+    margin: auto;
+    width: 100%;
+    top: 0;
   }
 
   .logo img {
@@ -89,9 +94,7 @@ import "../styles/style.css";
   .menu a:hover {
     color: var(--power-blue-color);
   }
-  hr {
-    display: none;
-  }
+
   .burger {
     width: 30px;
     height: 20px;
@@ -105,9 +108,11 @@ import "../styles/style.css";
     margin-bottom: 5px;
     transition: 0.2s linear;
   }
-  .burger {
+  .burger,
+  .arrow {
     display: none;
   }
+
   /* __________________________ Tablet delen __________________________ */
   /* Reglen gælder til og med 1024px */
   @media screen and (max-width: 1024px) {
@@ -122,6 +127,13 @@ import "../styles/style.css";
     .burger {
       display: block;
       text-align: start;
+    }
+    .arrow {
+      display: block;
+      width: 44px;
+      height: 44px;
+      background: var(--dreamy-white-color);
+      position: relative;
     }
     .burger.active .line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
@@ -140,24 +152,55 @@ import "../styles/style.css";
 
     nav.active .menu {
       display: block;
-      background-color: white;
+      /* background-color: var(--background-color);
       position: absolute;
-      top: 80px;
+      top: 80px; */
       left: 0;
-      width: 100%;
+      /* width: 100%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       z-index: 1;
-      text-align: start;
+      text-align: start; */
+
+      padding-top: 30px;
+      transform: none;
+
+      position: fixed;
+      transition: transform 0.3s ease-in-out;
+      width: 100%;
+      height: calc(100% - 4rem - 100px);
+      top: 4rem;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      background-color: var(--background-color);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 99;
+      /* transform: translateX(100%); */
+      padding: 30px 32px 0;
     }
 
     nav.active .menu li {
-      margin: 10px 20px;
+      /* margin: 10px 20px; */
       text-align: start;
+      margin-right: 0px;
     }
 
     nav.active .menu a {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       text-align: start;
+      padding-bottom: 15px;
+      padding-top: 13px;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(16, 17, 13, 0.09);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .menu a:hover {
+      color: var(--count-on-me-black-color);
     }
     .logo img {
       width: 90px;
@@ -167,7 +210,7 @@ import "../styles/style.css";
 
   /* __________________________ Mobil delen __________________________ */
   /* Reglen gælder til og med 768px */
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     header {
       padding-inline: 20px;
       text-align: start;
@@ -178,10 +221,13 @@ import "../styles/style.css";
       text-align: start;
     }
     .logo img {
-      width: 70px;
       height: auto;
+
+      width: 110px;
+      min-width: 110px;
+      top: 3px;
     }
-  }
+  } */
 </style>
 
 <script>

@@ -33,7 +33,9 @@ body {
   background-color: var(--body-color);
   list-style: none;
 }
-
+main {
+  padding-top: 5rem;
+}
 main {
   max-width: 1400px;
   padding-inline: 20px;
