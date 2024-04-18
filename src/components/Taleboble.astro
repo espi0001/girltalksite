@@ -1,0 +1,38 @@
+---
+import "../styles/style.css";
+---
+
+<section class="taleboble_section">
+  <article>
+    <div class="taleboble_grid">
+      <div class="taleboble">
+        <img src="/taleboble1.svg" alt="Tale boble" />
+      </div>
+      <div class="tekst">
+        <h2>Lyt og støt hendes selvudvikling</h2>
+      </div>
+    </div>
+  </article>
+
+  <style>
+    .taleboble_section {
+      background-color: var(--dreamy-white-color);
+    }
+    .taleboble_grid {
+      display: grid;
+      padding-left: 100px;
+    }
+    .taleboble {
+      grid-column: 1 / 10;
+      grid-row: 1 / 4;
+    }
+    .taleboble img {
+      width: 70%;
+    }
+
+    .tekst {
+      grid-column: 2 / 2;
+      grid-row: 2 / 2;
+    }
+  </style>
+</section>

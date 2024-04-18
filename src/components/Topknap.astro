@@ -1,0 +1,48 @@
+---
+import "../styles/style.css";
+---
+
+<div class="top" id="backToTopKnap"><a href="#top"><img src="/pil.svg" alt="pil op" /></a></div>
+
+<style>
+  .top {
+    transform: rotate(-90deg);
+    position: fixed;
+    color: var(--text-color);
+    right: -30px;
+    display: none; /* Initially hide the button */
+    text-decoration: none;
+    z-index: 100;
+    top: 42rem;
+  }
+  .top img {
+    margin-left: auto;
+    transition: 0.7s ease;
+    width: 40%;
+  }
+
+  .top img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.7s ease;
+  }
+</style>
+
+<script>
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    // Get the button
+    var mybutton = document.getElementById("backToTopKnap");
+
+    // Show the button when user scrolls down 40px from the top of the document
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+</script>
