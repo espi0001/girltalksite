@@ -2,35 +2,74 @@
 import "../styles/style.css";
 import MainLayout from "../layout/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Share from "./public/del_svg.svg";
 ---
 
 <MainLayout>
-  <h1>RÅDGIVNING FOR FORÆLDRE</h1>
-  <div class="hero-gap">
-    <Button variant="share_button" Linket="">
-      <div class="share-button-svg">
-        <img src="/del_svg.svg" alt="Del knap" />
-      </div>
-    </Button>
+  <div class="hero_layout">
+    <h1 class="grid-3_3_4_4">RÅDGIVNING FOR FORÆLDRE</h1>
+    <div class="grid-1_7_5_10">
+      <img src="public/halv-heromor.png" alt="Mor" />
+    </div>
+    <div class="grid-2_9_7_12">
+      <img src="public/halv-heropige.png" alt="Pige" />
+    </div>
+    <div class="grid-5_2_8_5">
+      <img src="public/kedafdet-pige.png" alt="Ked af det pige" />
+    </div>
+    <div class="grid-5_6_8_9">
+      <div class="hero-container-gap">
+        <Button variant="share_button" Linket="">
+          <div class="share-button-svg">
+            <img src="/del_svg.svg" alt="Del knap" />
+          </div>
+        </Button>
 
-    <p class="hero_para">Har du brug for at tale med nogen om din datters trivsel? Så kontakt vores forældrerådgivning.</p>
-    <Button variant="primary" Linket="">Læs mere</Button>
-    <hr class="hr_styling" />
+        <p class="hero_para">Har du brug for at tale med nogen om din datters trivsel? Så kontakt vores forældrerådgivning.</p>
+        <Button variant="primary" Linket="">Book samtale</Button>
+        <hr class="hr_styling" />
+      </div>
+    </div>
   </div>
 </MainLayout>
 <style>
   /* ___________________________ TABLET  ___________________________*/
   /* reglerne gælder når skærmen er minimum 768px */
+  .hero_layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-inline: 64px;
+  }
+  .grid-3_3_4_4 {
+    grid-area: 3 / 2 / 7 / 9;
+    z-index: 1000;
+  }
+  .grid-5_2_8_5 {
+    grid-area: 7 / 1 / 12 / 5;
+  }
+  .grid-5_6_8_9 {
+    grid-area: 7 / 7 / 11 / 10;
+  }
+  .grid-1_7_5_10 {
+    grid-area: 2 / 8 / 7 / 10;
+  }
+  .grid-2_9_7_12 {
+    grid-area: 3 / 11 / 10 / 13;
+  }
+
   .hero_para {
-    max-width: 300px;
+    max-width: 400px;
   }
   .share-button-svg {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
   }
-  .hero-gap {
-    margin-bottom: 16px;
+  .hero-container-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
   /* ___________________________ DESKTOP  ___________________________*/
 </style>
