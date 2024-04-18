@@ -81,6 +81,13 @@ a:hover {
   color: var(--action-color);
 }
 
+.hr_styling {
+  border: 0.1px solid grey;
+  width: 220px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 /* ___________________________ TABLET  ___________________________*/
 /* reglerne gælder når skærmen er minimum 768px */
 @media screen and (min-width: 768px) {

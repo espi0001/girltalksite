@@ -2,18 +2,35 @@
 import "../styles/style.css";
 import MainLayout from "../layout/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Share from "./public/del_svg.svg";
 ---
 
 <MainLayout>
-  <h1>HEEEJ</h1>
+  <h1>RÅDGIVNING FOR FORÆLDRE</h1>
+  <div class="hero-gap">
+    <Button variant="share_button" Linket="">
+      <div class="share-button-svg">
+        <img src="/del_svg.svg" alt="Del knap" />
+      </div>
+    </Button>
 
-  <h2>Det her er min h2</h2>
-
-  <h3>Det er min h3</h3>
+    <p class="hero_para">Har du brug for at tale med nogen om din datters trivsel? Så kontakt vores forældrerådgivning.</p>
+    <Button variant="primary" Linket="">Læs mere</Button>
+    <hr class="hr_styling" />
+  </div>
 </MainLayout>
 <style>
   /* ___________________________ TABLET  ___________________________*/
   /* reglerne gælder når skærmen er minimum 768px */
-
+  .hero_para {
+    max-width: 300px;
+  }
+  .share-button-svg {
+    width: 15px;
+    height: 15px;
+  }
+  .hero-gap {
+    margin-bottom: 16px;
+  }
   /* ___________________________ DESKTOP  ___________________________*/
 </style>
