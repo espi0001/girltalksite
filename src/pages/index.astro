@@ -6,17 +6,17 @@ import Button from "../components/Button.astro";
 
 <MainLayout>
   <div class="hero_layout">
-    <h1 class="grid-3_3_4_4">RÅDGIVNING FOR FORÆLDRE</h1>
-    <div class="grid-1_7_5_10">
+    <h1 class="hero-h1">RÅDGIVNING FOR FORÆLDRE</h1>
+    <div class="hero-mor">
       <img src="public/halv-heromor.png" alt="Mor" />
     </div>
-    <div class="grid-2_9_7_12">
+    <div class="hero-datter">
       <img src="public/halv-heropige.png" alt="Pige" />
     </div>
-    <div class="grid-5_2_8_5">
+    <div class="kedafdet-pige">
       <img src="public/kedafdet-pige.png" alt="Ked af det pige" />
     </div>
-    <div class="grid-5_6_8_9">
+    <div class="hero-textbox">
       <div class="hero-container-gap">
         <Button variant="share_button" Linket="">
           <div class="share-button-svg">
@@ -42,20 +42,21 @@ import Button from "../components/Button.astro";
     grid-row-gap: 0px;
     padding-inline: 64px;
   }
-  .grid-3_3_4_4 {
-    grid-area: 3 / 2 / 7 / 9;
+  .hero-h1 {
+    grid-area: 3 / 2 / 5 / 9;
     z-index: 1000;
+    color: var(--power-blue-color);
   }
-  .grid-5_2_8_5 {
-    grid-area: 7 / 1 / 12 / 5;
+  .kedafdet-pige {
+    grid-area: 6 / 1 / 11 / 5;
   }
-  .grid-5_6_8_9 {
-    grid-area: 7 / 7 / 11 / 10;
+  .hero-textbox {
+    grid-area: 6 / 7 / 11 / 10;
   }
-  .grid-1_7_5_10 {
+  .hero-mor {
     grid-area: 2 / 8 / 7 / 10;
   }
-  .grid-2_9_7_12 {
+  .hero-datter {
     grid-area: 3 / 11 / 10 / 13;
   }
 
@@ -70,6 +71,35 @@ import Button from "../components/Button.astro";
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 60px;
+  }
+
+  @keyframes slideTogether {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(25.1%, 13.85%);
+    }
+  }
+
+  @keyframes slideTogether2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-25.1%, -14%);
+    }
+  }
+
+  .hero_layout .hero-mor img {
+    animation: slideTogether 1.5s forwards;
+    animation-delay: 3s;
+  }
+
+  .hero_layout .hero-datter img {
+    animation: slideTogether2 1.5s forwards;
+    animation-delay: 3s;
   }
   /* ___________________________ DESKTOP  ___________________________*/
 </style>

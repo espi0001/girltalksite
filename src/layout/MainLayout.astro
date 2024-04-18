@@ -50,5 +50,21 @@ const { title } = Astro.props;
 
     <Topknap />
     <Footer />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      window.addEventListener("load", () => {
+        const sr = ScrollReveal({
+          distance: "100px",
+          duration: 2400,
+          easing: "ease-out",
+        });
+
+        sr.reveal(".hero-h1", { delay: 210, origin: "left" });
+        sr.reveal(".kedafdet-pige", { delay: 210, origin: "bottom" });
+        sr.reveal(".hero-mor", { delay: 210, origin: "top" });
+        sr.reveal(".hero-datter", { delay: 210, origin: "top" });
+        sr.reveal(".hero-textbox", { delay: 210, origin: "right" });
+      });
+    </script>
   </body>
 </html>
