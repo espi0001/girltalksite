@@ -1,0 +1,80 @@
+---
+import "../styles/style.css";
+import Button from "./Button.astro";
+const { image, image_alt, header, text, variant } = Astro.props;
+---
+
+<section class={variant}>
+  <article class="container">
+    <div class="billedet">
+      <div>
+        <img src={image} alt={image_alt} />
+      </div>
+    </div>
+    <div class="content">
+      <h2>{header}</h2>
+      <p class="text">{text}</p>
+      <Button variant="primary" Linket="">Læs mere</Button>
+      <hr class="hr_styling" />
+    </div>
+  </article>
+</section>
+
+<style>
+  .indhold_section1 {
+    background-color: var(--dreamy-white-color);
+    max-width: none;
+    padding: 0px;
+    padding-inline: 0px;
+    margin-inline: 0px;
+  }
+  .indhold_section2 {
+    background-color: none;
+    max-width: none;
+    padding: 0px;
+    padding-inline: 0px;
+    margin-inline: 0px;
+  }
+  .container {
+    align-items: center;
+  }
+
+  .image {
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 48px;
+  }
+  .content {
+    padding-top: 66px;
+  }
+  h2 {
+    text-transform: uppercase;
+    color: var(--power-blue-color);
+    margin-bottom: 24px;
+  }
+
+  .text {
+    margin-bottom: 24px;
+  }
+
+  Button {
+    padding-top: 24px;
+    padding-bottom: 42px;
+  }
+
+  /* ___________________________ TABLET  ___________________________*/
+  /* reglerne gælder når skærmen er minimum 768px */
+  @media screen and (min-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .image {
+      margin-inline: inherit;
+      align-content: center;
+      align-self: center;
+    }
+  }
+</style>
