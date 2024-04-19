@@ -34,9 +34,7 @@ body {
   list-style: none;
 }
 main {
-  max-width: 1400px;
-  padding: 40px 15px 40px 15px;
-
+  margin: auto;
   padding-top: 5rem;
 }
 
@@ -93,9 +91,9 @@ a:hover {
 /* reglerne gælder når skærmen er minimum 768px */
 @media screen and (min-width: 768px) {
   main {
-    max-width: 1400px;
+    /* max-width: 1400px;
     padding-inline: 15px;
-    margin-inline: 20px;
+    margin-inline: 20px; */
     padding-top: 5rem;
   }
 }

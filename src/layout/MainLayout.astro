@@ -54,16 +54,15 @@ const { title } = Astro.props;
     <script>
       window.addEventListener("load", () => {
         const sr = ScrollReveal({
-          distance: "100px",
-          duration: 2400,
+          distance: "160px",
+          duration: 1350,
           easing: "ease-out",
         });
 
-        sr.reveal(".hero-h1", { delay: 210, origin: "left" });
-        sr.reveal(".kedafdet-pige", { delay: 210, origin: "bottom" });
-        sr.reveal(".hero-mor", { delay: 210, origin: "top" });
-        sr.reveal(".hero-datter", { delay: 210, origin: "top" });
-        sr.reveal(".hero-textbox", { delay: 210, origin: "right" });
+        sr.reveal(".hero-h1, .billedet, .taleboble1, .tekst1", { delay: 110, origin: "left" });
+        sr.reveal(".kedafdet-pige", { delay: 110, origin: "bottom" });
+        sr.reveal(".hero-mor, .hero-datter, .citat", { delay: 110, origin: "top" });
+        sr.reveal(".hero-textbox, .content, .taleboble2, .tekst2", { delay: 110, origin: "right" });
       });
     </script>
   </body>

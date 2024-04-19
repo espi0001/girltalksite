@@ -2,23 +2,22 @@
 import "../styles/style.css";
 ---
 
-<div class="top" id="backToTopKnap"><a href="#top"><img src="/pil.svg" alt="pil op" /></a></div>
+<div class="top" id="backToTopKnap"><a href="#top"><img src="public/chevron-up.svg" alt="pil op" /></a></div>
 
 <style>
   .top {
-    transform: rotate(-90deg);
     position: fixed;
     color: var(--text-color);
-    right: -30px;
     display: none; /* Initially hide the button */
     text-decoration: none;
     z-index: 100;
+    right: 45px;
     top: 42rem;
   }
   .top img {
     margin-left: auto;
     transition: 0.7s ease;
-    width: 40%;
+    width: 200%;
   }
 
   .top img:hover {

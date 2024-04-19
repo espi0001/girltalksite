@@ -5,34 +5,30 @@ import "../styles/style.css";
 <section class="taleboble_section">
   <article>
     <div class="taleboble_grid">
-      <div class="taleboble">
+      <div class="taleboble2">
         <img src="/taleboble2.svg" alt="Tale boble" />
       </div>
-      <div class="tekst">
+      <div class="tekst2">
         <h2>Skab et trygt rum for hendes <br /> følelser og åben dialogen</h2>
       </div>
     </div>
   </article>
-
-  <style>
-    .taleboble_section {
-      background-color: var(--dreamy-white-color);
-    }
-    .taleboble_grid {
-      display: grid;
-      padding-left: 410px;
-    }
-    .taleboble {
-      grid-column: 3 / 10;
-      grid-row: 1 / 4;
-    }
-    .taleboble img {
-      width: 90%;
-    }
-
-    .tekst {
-      grid-column: 5 / 7;
-      grid-row: 2 / 2;
-    }
-  </style>
 </section>
+
+<style>
+  .article {
+    max-width: 1440px;
+  }
+  .taleboble_section {
+    background-color: var(--dreamy-white-color);
+    padding: 40px;
+  }
+
+  .taleboble_grid {
+    padding-inline: 300px;
+    padding-right: 150px;
+  }
+  .tekst2 {
+    display: none;
+  }
+</style>

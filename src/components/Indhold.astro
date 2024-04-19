@@ -23,12 +23,10 @@ const { image, image_alt, header, text, variant } = Astro.props;
 <style>
   .indhold_section1 {
     background-color: var(--dreamy-white-color);
-    max-width: none;
     padding: 112px 0px;
   }
   .indhold_section2 {
     background-color: none;
-    max-width: none;
     padding: 112px 0px;
   }
   .container {
@@ -42,6 +40,7 @@ const { image, image_alt, header, text, variant } = Astro.props;
     margin-top: 48px;
   }
   .content {
+    max-width: 1440px;
     padding-top: 66px;
   }
   h2 {
