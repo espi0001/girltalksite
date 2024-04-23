@@ -43,11 +43,13 @@ h1 {
   font-size: 4rem;
   font-family: var(--secondary-font);
   font-weight: bold;
+  color: var(--power-blue-color);
 }
 h2 {
   font-size: 2.5rem;
   font-weight: 600;
   font-family: var(--primary-font);
+  color: var(--power-blue-color);
 }
 
 h3 {

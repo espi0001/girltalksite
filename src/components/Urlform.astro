@@ -1,0 +1,68 @@
+---
+import "../styles/style.css";
+const { parentActive } = Astro.props;
+---
+
+<div class="toggle-button__container">
+  <button id="girl-universe" class="toggle-button">For unge</button>
+  <button id="adult-universe" class="toggle-button">For forældre</button>
+</div>
+
+<style>
+  .toggle-button__container {
+    display: flex;
+    margin-left: 200px;
+  }
+
+  .toggle-button {
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: var(--dreamy-white-color);
+    color: #000;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .toggle-button.active {
+    color: #fff;
+  }
+
+  #girl-universe.active {
+    background-color: var(--love-red-color);
+  }
+
+  #adult-universe.active {
+    background-color: var(--power-blue-color);
+  }
+</style>
+
+<script define:vars={{ parentActive }}>
+  document.addEventListener("DOMContentLoaded", function () {
+    const girlButton = document.getElementById("girl-universe");
+    const adultButton = document.getElementById("adult-universe");
+
+    console.log("parentActive", parentActive);
+    if (parentActive === "unge") {
+      girlButton.classList.add("active");
+    } else {
+      adultButton.classList.add("active");
+    }
+    girlButton.addEventListener("click", function () {
+      console.log("Clicked on 'For unge' button");
+      //   girlButton.classList.add("active");
+      //   adultButton.classList.remove("active");
+      window.location.href = "/unge";
+    });
+
+    adultButton.addEventListener("click", function () {
+      console.log("Clicked on 'For forældre' button");
+      //   adultButton.classList.add("active");
+      //   girlButton.classList.remove("active");
+      window.location.href = "/";
+    });
+  });
+</script>

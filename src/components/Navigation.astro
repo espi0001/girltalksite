@@ -1,5 +1,7 @@
 ---
+import Urlform from "./Urlform.astro";
 import "../styles/style.css";
+const { parentActive } = Astro.props;
 ---
 
 <header>
@@ -11,7 +13,7 @@ import "../styles/style.css";
 
   <nav>
     <ul class="menu">
-      <li><a href="/test">Rådgivning <span class="arrow"><img src="/chevron-right.svg" alt="chevron right arrow" /></span></a></li>
+      <li><a href="#">Rådgivning <span class="arrow"><img src="/chevron-right.svg" alt="chevron right arrow" /></span></a></li>
 
       <li><a href="#">Viden</a></li>
 
@@ -22,6 +24,7 @@ import "../styles/style.css";
       <li><a href="#">Støt <span class="arrow"><img src="/chevron-right.svg" alt="chevron right arrow" /></span></a></li>
 
       <li><a href="#">Bliv frivillig</a></li>
+      <Urlform parentActive={parentActive} />
     </ul>
 
     <div class="burger">
@@ -35,9 +38,8 @@ import "../styles/style.css";
 <style>
   header {
     display: flex;
-
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     /* padding-top: 25px;
     padding-bottom: 25px; */
     padding-inline: 15px;

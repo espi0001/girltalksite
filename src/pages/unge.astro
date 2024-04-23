@@ -8,14 +8,17 @@ import Taleboble from "../components/Taleboble.astro";
 import Taleboblepink from "../components/Taleboblepink.astro";
 ---
 
-<MainLayout parentActive="voksne">
+<MainLayout parentActive="unge">
   <div class="hero_layout">
+    <h1 class="hero-h1">RÅDGIVNING FOR UNGE</h1>
     <div class="hero-mor">
       <img src="/halv-heromor.png" alt="Mor" />
     </div>
-    <h1 class="hero-h1">RÅDGIVNING FOR FORÆLDRE</h1>
-    <div class="hero_image">
-      <img src="/mor_datter.jpeg" alt="Mor og datter" />
+    <div class="hero-datter">
+      <img src="/halv-heropige.png" alt="Pige" />
+    </div>
+    <div class="kedafdet-pige">
+      <img src="/kedafdet-pige.png" alt="Ked af det pige" />
     </div>
     <div class="hero-textbox">
       <div class="hero-container-gap">
@@ -30,12 +33,6 @@ import Taleboblepink from "../components/Taleboblepink.astro";
         <hr class="hr_styling" />
       </div>
     </div>
-    <div class="hero-datter">
-      <img src="/halv-heropige.png" alt="Pige" />
-    </div>
-    <div class="kedafdet-pige">
-      <img src="/kedafdet-pige.png" alt="Ked af det pige" />
-    </div>
   </div>
   <Indhold variant="indhold_section1" image="https://www.girltalk.dk/media/jhgem5ez/billeder-til-hjemmesiden-43.jpg?anchor=center&mode=crop&width=1000&height=742&rnd=133426929288470000&format=webp&quality=80" image_alt="Webfeatue video" header="Inspiration Og Viden" text="Vi har samlet faglig viden om unges trivsel. Her kan du få ny indsigt, perspektiver og en større forståelse for, hvordan du som voksen bedst kan støtte og forstå for din datters virkelighed." />
 
@@ -47,12 +44,35 @@ import Taleboblepink from "../components/Taleboblepink.astro";
   <Indhold variant="indhold_section2" image="https://www.girltalk.dk/media/p1sdu2no/billeder-til-hjemmesiden-44.jpg?anchor=center&mode=crop&width=1000&height=742&rnd=133426929689200000&format=webp&quality=80" image_alt="Tre kvinder læner sig op af hinanden" header="Savner Din Datter Et Fælleskab?" text="Så kan det være, at et af vores fysiske gruppeforløb er noget for hende. Vores frivillige gruppeledere er trænet til at skabe trygge rum. Gennem øvelser og samtaler skaber gruppelederne rammerne for et trygt fællesskab, hvor deltagerne bliver mødt i øjenhøjde og kan spejle sig i hinanden. De får hjælp til at tale, om de ting der er svære, og sammen opbygger de en tro på, at de er gode nok, præcis som de er." />
 </MainLayout>
 <style>
+  /* ___________________________ TABLET  ___________________________*/
+  /* reglerne gælder når skærmen er minimum 768px */
   .hero_layout {
-    padding: 0 64px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-inline: 64px;
+    background-color: var(--hug-me-pink-color);
   }
-  h1 {
-    font-size: 2rem;
+  .hero-h1 {
+    grid-area: 3 / 2 / 5 / 9;
+    z-index: 1000;
+    color: var(--love-red-color);
   }
+  .kedafdet-pige {
+    grid-area: 6 / 1 / 11 / 5;
+  }
+  .hero-textbox {
+    grid-area: 6 / 7 / 11 / 10;
+  }
+  .hero-mor {
+    grid-area: 1 / 7 / 6 / 9;
+  }
+  .hero-datter {
+    grid-area: 2 / 10 / 9 / 12;
+  }
+
   .hero_para {
     max-width: 400px;
     margin-bottom: 16px;
@@ -66,78 +86,32 @@ import Taleboblepink from "../components/Taleboblepink.astro";
     margin-top: 60px;
   }
 
-  /* ___________________________ TABLET  ___________________________*/
-  /* reglerne gælder når skærmen er minimum 768px */
-
-  @media (max-width: 1024px) {
-    .hero_layout .hero-mor,
-    .hero_layout .hero-datter,
-    .kedafdet-pige {
-      display: none;
+  @keyframes slideTogether {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(25.1%, 12.78%);
     }
   }
 
+  @keyframes slideTogether2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-25.1%, -13%);
+    }
+  }
+
+  .hero_layout .hero-mor img {
+    animation: slideTogether 1.5s forwards;
+    animation-delay: 3s;
+  }
+
+  .hero_layout .hero-datter img {
+    animation: slideTogether2 1.5s forwards;
+    animation-delay: 3s;
+  }
   /* ___________________________ DESKTOP  ___________________________*/
-
-  @media (min-width: 1024px) {
-    @keyframes slideTogether {
-      0% {
-        transform: translate(0, 0);
-      }
-      100% {
-        transform: translate(25.1%, 12.78%);
-      }
-    }
-
-    @keyframes slideTogether2 {
-      0% {
-        transform: translate(0, 0);
-      }
-      100% {
-        transform: translate(-25.1%, -13%);
-      }
-    }
-
-    .hero_image {
-      display: none;
-    }
-    .hero_layout .hero-mor img {
-      animation: slideTogether 1.5s forwards;
-      animation-delay: 3s;
-    }
-
-    .hero_layout .hero-datter img {
-      animation: slideTogether2 1.5s forwards;
-      animation-delay: 3s;
-    }
-    h1 {
-      font-size: 4rem;
-    }
-
-    .hero_layout {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(12, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      padding-inline: 64px;
-    }
-    .hero-h1 {
-      grid-area: 3 / 2 / 5 / 9;
-      z-index: 1000;
-      color: var(--power-blue-color);
-    }
-    .kedafdet-pige {
-      grid-area: 6 / 1 / 11 / 5;
-    }
-    .hero-textbox {
-      grid-area: 6 / 7 / 11 / 10;
-    }
-    .hero-mor {
-      grid-area: 1 / 7 / 6 / 9;
-    }
-    .hero-datter {
-      grid-area: 2 / 10 / 9 / 12;
-    }
-  }
 </style>
