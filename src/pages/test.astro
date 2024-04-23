@@ -1,0 +1,49 @@
+---
+import "../styles/style.css";
+import MainLayout from "../layout/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Share from "./public/del_svg.svg";
+import Indhold from "../components/Indhold.astro";
+import Citat from "../components/Citat.astro";
+import Taleboble from "../components/Taleboble.astro";
+import Taleboblepink from "../components/Taleboblepink.astro";
+---
+
+<MainLayout>
+  <h1>RÅDGIVNING FOR FORÆLDRE</h1>
+  <div class="hero-gap">
+    <Button variant="share_button" Linket="">
+      <div class="share-button-svg">
+        <img src="/del_svg.svg" alt="Del knap" />
+      </div>
+    </Button>
+
+    <p class="hero_para">Har du brug for at tale med nogen om din datters trivsel? Så kontakt vores forældrerådgivning.</p>
+    <Button variant="primary" Linket="">Læs mere</Button>
+    <hr class="hr_styling" />
+  </div>
+
+  <Indhold variant="indhold_section1" image="https://www.girltalk.dk/media/jhgem5ez/billeder-til-hjemmesiden-43.jpg?anchor=center&mode=crop&width=1000&height=742&rnd=133426929288470000&format=webp&quality=80" image_alt="Webfeatue video" header="Inspiration Og Viden" text="Vi har samlet faglig viden om unges trivsel. Her kan du få ny indsigt, perspektiver og en større forståelse for, hvordan du som voksen bedst kan støtte og forstå for din datters virkelighed." />
+
+  <Citat />
+
+  <Taleboble />
+  <Taleboblepink />
+
+  <Indhold variant="indhold_section2" image="https://www.girltalk.dk/media/p1sdu2no/billeder-til-hjemmesiden-44.jpg?anchor=center&mode=crop&width=1000&height=742&rnd=133426929689200000&format=webp&quality=80" image_alt="Tre kvinder læner sig op af hinanden" header="Savner Din Datter Et Fælleskab?" text="Så kan det være, at et af vores fysiske gruppeforløb er noget for hende. Vores frivillige gruppeledere er trænet til at skabe trygge rum. Gennem øvelser og samtaler skaber gruppelederne rammerne for et trygt fællesskab, hvor deltagerne bliver mødt i øjenhøjde og kan spejle sig i hinanden. De får hjælp til at tale, om de ting der er svære, og sammen opbygger de en tro på, at de er gode nok, præcis som de er." />
+</MainLayout>
+<style>
+  /* ___________________________ TABLET  ___________________________*/
+  /* reglerne gælder når skærmen er minimum 768px */
+  .hero_para {
+    max-width: 300px;
+  }
+  .share-button-svg {
+    width: 15px;
+    height: 15px;
+  }
+  .hero-gap {
+    margin-bottom: 16px;
+  }
+  /* ___________________________ DESKTOP  ___________________________*/
+</style>
