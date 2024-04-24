@@ -24,6 +24,14 @@ img {
   display: block;
   object-fit: cover;
 }
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 html,
 body {
   scroll-behavior: smooth;
